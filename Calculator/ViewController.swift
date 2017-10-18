@@ -26,9 +26,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonEqual: UIButton!
     @IBOutlet weak var buttonAddition: UIButton!
     @IBOutlet weak var buttonSubstraction: UIButton!
+    @IBOutlet weak var buttonMultiplication: UIButton!
+    @IBOutlet weak var buttonDivision: UIButton!
+    
     var valueA: Double = 0
     var valueB: Double = 0
     var currentOperator: String = ""
+    var refreshTextField: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +45,13 @@ class ViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func numberPress(_ sender: UIButton) {
-        // Get current text
+        // get current text
         var currentText = ""
-        if mainTextField.text != "" {
+        if mainTextField.text != "" && !refreshTextField {
             currentText = mainTextField.text!
         }
         
-        // Find text to be added
+        // find text to be added
         var value = sender.currentTitle!
         if currentText == "0" && value == "0" {
             value = ""
@@ -60,23 +64,25 @@ class ViewController: UIViewController {
             }
         }
         
-        // Update text field
+        // update text field
+        refreshTextField = false
         mainTextField.text = "\(currentText)\(value)"
     }
     
     @IBAction func operatorPress(_ sender: UIButton) {
-        // Ignore if text field is empty
+        // ignore if text field is empty
         if mainTextField.text != "" {
+            // get new operator
             let newOperator = sender.titleLabel?.text!
+            // refresh text field
+            refreshTextField = true
+            
             if currentOperator == "" && newOperator != "=" {
                 // copy current value
                 valueA = Double(mainTextField.text!)!
                 
                 // update operator
                 currentOperator = newOperator!
-                
-                // update display
-                mainTextField.text = ""
             } else {
                 // copy current value
                 valueB = Double(mainTextField.text!)!
@@ -88,18 +94,25 @@ class ViewController: UIViewController {
                     result = valueA + valueB
                 case "-":
                     result = valueA - valueB
+                case "×":
+                    result = valueA * valueB
+                case "÷":
+                    result = valueA / valueB
                 default:
                     result = 0
                 }
                 
-                // update operator
-                if newOperator == "=" {
-                    currentOperator = ""
-                } else {
+                // update operator & values
+                currentOperator = ""
+                valueA = 0
+                valueB = 0
+                
+                if newOperator != "=" {
+                    valueA = result
                     currentOperator = newOperator!
                 }
                 
-                // update display
+                // update text field
                 mainTextField.text = String(result)
             }
         }
