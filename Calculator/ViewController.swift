@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
     @IBOutlet weak var buttonPeriod: UIButton!
+    @IBOutlet weak var buttonPlusMinus: UIButton!
     @IBOutlet weak var buttonEqual: UIButton!
     @IBOutlet weak var buttonAddition: UIButton!
     @IBOutlet weak var buttonSubstraction: UIButton!
@@ -45,22 +46,41 @@ class ViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func numberPress(_ sender: UIButton) {
+        // find text to be added
+        var value = sender.currentTitle!
         // get current text
         var currentText = ""
-        if mainTextField.text != "" && !refreshTextField {
+        
+        // value shourld be refreshed?
+        if mainTextField.text != "" && (!refreshTextField  || value == "±") {
             currentText = mainTextField.text!
         }
         
-        // find text to be added
-        var value = sender.currentTitle!
+        // zero
         if currentText == "0" && value == "0" {
             value = ""
         }
+        
+        // period
         if value == "." {
-            if (currentText == "") {
+            if currentText == "" {
                 value = "0."
             } else if currentText.range(of: ".") != nil {
                 value = ""
+            }
+        }
+        
+        // plus/minus
+        if value == "±" {
+            value = ""
+            if currentText != "" {
+                if currentText.hasPrefix("-") {
+                    let start = currentText.startIndex
+                    let end = currentText.index(after: start)
+                    currentText = currentText.replacingOccurrences(of: "-", with: "", range: start..<end)
+                } else {
+                    currentText = "-\(currentText)"
+                }
             }
         }
         

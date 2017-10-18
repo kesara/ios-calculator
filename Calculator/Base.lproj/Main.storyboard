@@ -203,6 +203,17 @@
                                     <action selector="operatorPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSu-WE-RgA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ4-zx-Wzp">
+                                <rect key="frame" x="54" y="58" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="±">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MGf-ng-S9w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -223,6 +234,7 @@
                         <outlet property="buttonEqual" destination="bsa-he-Vgo" id="abE-ox-XUE"/>
                         <outlet property="buttonMultiplication" destination="b1E-KH-4Hx" id="edr-Yo-rIW"/>
                         <outlet property="buttonPeriod" destination="WqC-he-KuP" id="B0Z-Fw-IJs"/>
+                        <outlet property="buttonPlusMinus" destination="fZ4-zx-Wzp" id="MaW-Xy-yej"/>
                         <outlet property="buttonSubstraction" destination="Mt8-y5-DLP" id="XlG-AU-LA4"/>
                         <outlet property="mainTextField" destination="Qdr-Dz-xwM" id="9dw-gL-T37"/>
                     </connections>
