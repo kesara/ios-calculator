@@ -235,7 +235,7 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdr-Dz-xwM">
                                 <rect key="frame" x="18" y="20" width="284" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -243,6 +243,13 @@
                                     <action selector="changeText:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="MSG-vs-vY0"/>
                                 </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OvT-D8-0oS">
+                                <rect key="frame" x="16" y="420" width="286" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -270,7 +277,8 @@
                         <outlet property="buttonPeriod" destination="WqC-he-KuP" id="B0Z-Fw-IJs"/>
                         <outlet property="buttonPlusMinus" destination="fZ4-zx-Wzp" id="MaW-Xy-yej"/>
                         <outlet property="buttonSubstraction" destination="Mt8-y5-DLP" id="XlG-AU-LA4"/>
-                        <outlet property="mainTextField" destination="Qdr-Dz-xwM" id="9dw-gL-T37"/>
+                        <outlet property="textFieldMain" destination="Qdr-Dz-xwM" id="9dw-gL-T37"/>
+                        <outlet property="textViewHistory" destination="OvT-D8-0oS" id="Veg-r0-qlO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
