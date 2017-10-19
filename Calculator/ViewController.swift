@@ -29,11 +29,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonSubstraction: UIButton!
     @IBOutlet weak var buttonMultiplication: UIButton!
     @IBOutlet weak var buttonDivision: UIButton!
+    @IBOutlet weak var buttonAllCancel: UIButton!
     
     var valueA: Double = 0
     var valueB: Double = 0
     var currentOperator: String = ""
-    var refreshTextField: Bool = false
+    var refreshTextField: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,17 @@ class ViewController: UIViewController {
     }
     
     // MARK: Actions
+    @IBAction func allCancel(_ sender: UIButton) {
+        // reset all variables
+        valueA = 0
+        valueB = 0
+        currentOperator = ""
+        refreshTextField = true
+        
+        // update text field
+        mainTextField.text = "0"
+    }
+    
     @IBAction func numberPress(_ sender: UIButton) {
         // find text to be added
         var value = sender.currentTitle!
