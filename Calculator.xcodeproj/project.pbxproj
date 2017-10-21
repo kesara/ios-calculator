@@ -14,6 +14,7 @@
 		D33EFA341F960DDF00D8F3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33EFA321F960DDF00D8F3D4 /* LaunchScreen.storyboard */; };
 		D33EFA3F1F960DDF00D8F3D4 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EFA3E1F960DDF00D8F3D4 /* CalculatorTests.swift */; };
 		D33EFA4A1F960DDF00D8F3D4 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EFA491F960DDF00D8F3D4 /* CalculatorUITests.swift */; };
+		D3A4D8671F9B3C7F003B6FEC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D3A4D8661F9B3C7F003B6FEC /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		D33EFA451F960DDF00D8F3D4 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33EFA491F960DDF00D8F3D4 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		D33EFA4B1F960DDF00D8F3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A4D8651F9B3A32003B6FEC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D3A4D8661F9B3C7F003B6FEC /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 		D33EFA1D1F960DDF00D8F3D4 = {
 			isa = PBXGroup;
 			children = (
+				D3A4D8661F9B3C7F003B6FEC /* LICENSE */,
+				D3A4D8651F9B3A32003B6FEC /* README.md */,
 				D33EFA281F960DDF00D8F3D4 /* Calculator */,
 				D33EFA3D1F960DDF00D8F3D4 /* CalculatorTests */,
 				D33EFA481F960DDF00D8F3D4 /* CalculatorUITests */,
@@ -234,6 +239,7 @@
 			files = (
 				D33EFA341F960DDF00D8F3D4 /* LaunchScreen.storyboard in Resources */,
 				D33EFA311F960DDF00D8F3D4 /* Assets.xcassets in Resources */,
+				D3A4D8671F9B3C7F003B6FEC /* LICENSE in Resources */,
 				D33EFA2F1F960DDF00D8F3D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
