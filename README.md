@@ -1,7 +1,8 @@
 #  iOS Calculator
 
 Calculator application for Apple iOS phones.
-Just pet project to try out Swift programing language and Apple app development.
+
+Just a pet project to try out Swift programing language and Apple iPhone application development.
 
 ## Screenshot
 ![iOS Calculator](https://i.imgur.com/Invghzv.png)
