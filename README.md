@@ -5,7 +5,7 @@ Calculator application for Apple iOS phones.
 Just a pet project to try out Swift programing language and Apple iPhone application development.
 
 ## Screenshot
-![iOS Calculator](https://i.imgur.com/Invghzv.png)
+![iOS Calculator](https://i.imgur.com/DNRna4F.png)
 
 ## License
 iOS Calculator is released under [GNU GPL v3](LICENSE)
