@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         var currentText = ""
         
         // value shourld be refreshed?
-        if textFieldMain.text != "" && (!refreshTextField  || value == "±") {
+        if textFieldMain.text != "0" && (!refreshTextField  || value == "±") {
             currentText = textFieldMain.text!
         }
         
