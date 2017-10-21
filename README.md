@@ -9,6 +9,7 @@ Just a pet project to try out Swift programing language and Apple iPhone applica
 
 ## License
 iOS Calculator is released under [GNU GPL v3](LICENSE)
+
 Copyright (C) 2017 Kesara Rathnayake
 
 This program is free software: you can redistribute it and/or modify
